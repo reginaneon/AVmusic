@@ -1,7 +1,0 @@
-{
-  "utterance": "that's enough",
-  "intent_type": "not_now_intent",
-  "intent": {
-    "DeclineKeyword": "that's enough"
-  }
-}
