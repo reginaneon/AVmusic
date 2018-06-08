@@ -1,0 +1,7 @@
+{
+  "utterance": "go ahead",
+  "intent_type": "playnow_intent",
+  "intent": {
+    "AgreementKeyword": "go ahead"
+  }
+}
