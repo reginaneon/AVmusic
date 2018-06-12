@@ -1,2 +1,2 @@
+urllib3
 youtube-dl>=2018.05.18
-mpv
