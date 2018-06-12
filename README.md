@@ -31,6 +31,17 @@ or -
 * "play some imagine dragons music"
 * "av play study music playlist"
 
+## Important install notes
+Please note that the recommended way to install required mpv package for Ubuntu is via PPAs. 
+It's not everyone's first choice to have that process automated. 
+If you have any problems with installing the skill (or mpv package) via MSM, consider executing the following code manually: 
+
+* `sudo add-apt-repository ppa:mc3man/mpv-tests`
+* `sudo apt update && sudo apt install mpv`
+
+If AV stops working but nothings seems to be changed, try updating youtube-dl via:
+* `sudo pip install --upgrade youtube-dl`
+
 ## Plans for the future releases
 * Add pause functionality
 * Play just music stream and no video for slower connections
