@@ -50,7 +50,7 @@ class AVmusicSkill(MycroftSkill):
 
     def AVmusic(self, message):
         self.stop()
-        self.speak('Would you like me to play it now?')
+        self.speak('Would you like me to play it now?', True)
 
         utterance = message.data.get('utterance').lower()
         utterance = utterance.replace(
