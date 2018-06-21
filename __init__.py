@@ -55,7 +55,7 @@ class AVmusicSkill(MycroftSkill):
         utterance = message.data.get('utterance').lower()
         utterance = utterance.replace(
             message.data.get('AVmusicKeyword'), '')
-        self.vid = self.search(utterance)
+        self.vid = self.search(utterance + "playlist")
 
         self.enable_intent('playnow_intent')
         self.enable_intent('not_now_intent')
