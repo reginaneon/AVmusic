@@ -4,7 +4,6 @@ from adapt.intent import IntentBuilder
 from os.path import dirname
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
-
 from mycroft.skills.core import MycroftSkill
 
 
