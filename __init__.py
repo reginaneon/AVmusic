@@ -65,7 +65,7 @@ class AVmusicSkill(MycroftSkill):
         try:
             self.process = subprocess.Popen(["mpv", self.vid],
                                             stdin=subprocess.PIPE)
-            self.enable_intent('pause_intent')
+            # self.enable_intent('pause_intent')
             self.speak_dialog('SayStop')
 
         except TypeError:
