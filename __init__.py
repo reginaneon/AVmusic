@@ -9,6 +9,11 @@ from bs4 import BeautifulSoup
 
 from mycroft.skills.core import MycroftSkill
 
+try:
+    from mycroft.device import device as d_hw
+except ImportError:
+    d_hw = 'desktop'
+
 
 class AVmusicSkill(MycroftSkill):
     def __init__(self):
@@ -65,7 +70,10 @@ class AVmusicSkill(MycroftSkill):
 
     def handle_playnow_intent(self, message):
         try:
-            self.process = check_call(["mpv", self.vid], stdout=DEVNULL, stderr=STDOUT)
+            if d_hw == 'pi':
+                self.process = check_call(["mpv", "--vid=no", self.vid], stdout=DEVNULL, stderr=STDOUT)
+            else:
+                self.process = check_call(["mpv", self.vid], stdout=DEVNULL, stderr=STDOUT)
             # self.enable_intent('pause_intent')
             self.speak_dialog('SayStop')
 
