@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
-import subprocess
-from adapt.intent import IntentBuilder
+import urllib.error
+import urllib.parse
+import urllib.request
 from os.path import dirname
-import urllib.request, urllib.parse, urllib.error
+from subprocess import DEVNULL, STDOUT, check_call
+from adapt.intent import IntentBuilder
 from bs4 import BeautifulSoup
+
 from mycroft.skills.core import MycroftSkill
 
 
@@ -62,8 +65,7 @@ class AVmusicSkill(MycroftSkill):
 
     def handle_playnow_intent(self, message):
         try:
-            self.process = subprocess.Popen(["mpv", self.vid],
-                                            stdin=subprocess.PIPE)
+            self.process = check_call(["mpv", self.vid], stdout=DEVNULL, stderr=STDOUT)
             # self.enable_intent('pause_intent')
             self.speak_dialog('SayStop')
 
