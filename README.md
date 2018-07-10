@@ -1,5 +1,5 @@
 ## AVmusic
-Provides the video/audio playback of music requested by the user.
+Provides the video/audio playback of music requested by the user. Video + audio stream for the desktop users and just audio for Pi. 
 
 ## Description
 The skill provides the functionality to playback the video of any music band/album/playlist
@@ -42,9 +42,11 @@ If you have any problems with installing the skill (or mpv package) via MSM, con
 If AV stops working but nothings seems to be changed, try updating youtube-dl via:
 * `sudo pip install --upgrade youtube-dl`
 
+
+Note that mpv player has a requirement of ffmpeg. It should be installed automatically, however, if you are having issues, consider checking if all of the supporting packages for mpv are in place. 
+
 ## Plans for the future releases
 * Add pause functionality
-* Play just music stream and no video for slower connections
 * Use Mycroft Audio backend
 
 ## Credits
