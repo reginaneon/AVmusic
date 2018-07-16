@@ -45,6 +45,12 @@ If AV stops working but nothings seems to be changed, try updating youtube-dl vi
 
 Note that mpv player has a requirement of ffmpeg. It should be installed automatically, however, if you are having issues, consider checking if all of the supporting packages for mpv are in place. 
 
+## For Pi users
+Thanks to @KathyReid and @neil969 we have a solution for Pi users in case of problems with the installation. If the standard "install AVmusic" does not seem to work, please do: 
+
+* `source /opt/venvs/mycroft-core/bin/activate`, which should change the shell prompt to: (mycroft-core) pi@picroft:~ $
+* `msm install https://github.com/reginaneon/AVmusic`
+
 ## Plans for the future releases
 * Add pause functionality
 * Use Mycroft Audio backend
